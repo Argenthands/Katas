@@ -45,7 +45,7 @@ const test = {
     },
     x12 :{
         arr: [1, 1],
-        rres: true,
+        res: true,
     },
     x13 :{
         arr: [1, 2, 5, 3, 5],
@@ -77,36 +77,31 @@ const test = {
     },
 }
 
-
 function almostIncreasingSequence(sequence){
-    //reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ }, initialValue)
-    let temp = [...new Set(sequence)]
-    for(let i=0; i<temp.length; i++){
-        if(i < temp.length){
-            if
-        }
-    }    
+    if(sequence.length < 3){
+        return true
+    }
+    let newSequence = [...new Set(sequence)]
 }
-
-console.log(almostIncreasingSequence(test.x1.arr), test.x1.res)
-console.log(almostIncreasingSequence(test.x2.arr), test.x2.res)
-console.log(almostIncreasingSequence(test.x3.arr), test.x3.res)
-console.log(almostIncreasingSequence(test.x4.arr), test.x4.res)
-console.log(almostIncreasingSequence(test.x5.arr), test.x5.res)
-console.log(almostIncreasingSequence(test.x6.arr), test.x6.res)
+console.log('1 -->',almostIncreasingSequence(test.x1.arr), test.x1.res)
+console.log('2 -->',almostIncreasingSequence(test.x2.arr), test.x2.res)
+console.log('3 -->',almostIncreasingSequence(test.x3.arr), test.x3.res)
+console.log('4 -->',almostIncreasingSequence(test.x4.arr), test.x4.res)
+console.log('5 -->',almostIncreasingSequence(test.x5.arr), test.x5.res)
+console.log('6 -->',almostIncreasingSequence(test.x6.arr), test.x6.res)
+console.log('7 -->',almostIncreasingSequence(test.x7.arr), test.x7.res)
+console.log('8 -->',almostIncreasingSequence(test.x8.arr), test.x8.res)
+console.log('9 -->',almostIncreasingSequence(test.x9.arr), test.x9.res)
+console.log('10 -->',almostIncreasingSequence(test.x10.arr), test.x10.res)
+console.log('11 -->',almostIncreasingSequence(test.x11.arr), test.x11.res)
+console.log('12 -->',almostIncreasingSequence(test.x12.arr), test.x12.res)
+console.log('13 -->',almostIncreasingSequence(test.x13.arr), test.x13.res)
+console.log('14 -->',almostIncreasingSequence(test.x14.arr), test.x14.res)
+console.log('15 -->',almostIncreasingSequence(test.x15.arr), test.x15.res)
+console.log('17 -->',almostIncreasingSequence(test.x17.arr), test.x17.res)
+console.log('16 -->',almostIncreasingSequence(test.x16.arr), test.x16.res)
+console.log('18 -->',almostIncreasingSequence(test.x18.arr), test.x18.res)
+console.log('19 -->',almostIncreasingSequence(test.x19.arr), test.x19.res)
 /*
-console.log(almostIncreasingSequence(test.x7.arr), test.x7.res)
-console.log(almostIncreasingSequence(test.x8.arr), test.x8.res)
-console.log(almostIncreasingSequence(test.x9.arr), test.x9.res)
-console.log(almostIncreasingSequence(test.x10.arr), test.x10.res)
-console.log(almostIncreasingSequence(test.x11.arr), test.x11.res)
-console.log(almostIncreasingSequence(test.x12.arr), test.x12.res)
-console.log(almostIncreasingSequence(test.x13.arr), test.x13.res)
-console.log(almostIncreasingSequence(test.x14.arr), test.x14.res)
-console.log(almostIncreasingSequence(test.x15.arr), test.x15.res)
-console.log(almostIncreasingSequence(test.x16.arr), test.x16.res)
-console.log(almostIncreasingSequence(test.x17.arr), test.x17.res)
-console.log(almostIncreasingSequence(test.x18.arr), test.x18.res)
-console.log(almostIncreasingSequence(test.x19.arr), test.x19.res)
 */
 module.exports = almostIncreasingSequence

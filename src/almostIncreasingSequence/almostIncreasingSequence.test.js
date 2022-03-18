@@ -18,9 +18,9 @@ const test_15 = [10, 1, 2, 3, 4, 5, 6, 1] // false
 const test_16 = [1, 2, 3, 4, 3, 6] // true
 const test_17 = [1, 2, 3, 4, 99, 5, 6] // true
 const test_18 = [123, -17, -5, 1, 2, 3, 12, 43, 45] // true
-const test_19 = [3, 5, 67, 98, 3] // true
+const test_19 = [3, 5, 67, 98, 3] // trues
 
-describe('almostIncreasingSequence', ()=>{
+xdescribe('almostIncreasingSequence', ()=>{
 
     test(`should return false if receive the array ${test_1}`, ()=>{
         expect(almostIncreasingSequence(test_1)).toBe(false)
@@ -68,5 +68,9 @@ describe('almostIncreasingSequence', ()=>{
 
     test(`should return true if receive ${test_12}`, ()=>{
         expect(almostIncreasingSequence(test_12)).toBe(true)
+    }),
+
+    test(`should return true if receive ${test_13}`, ()=>{
+        expect(almostIncreasingSequence(test_13)).toBe(true)
     })
 })
