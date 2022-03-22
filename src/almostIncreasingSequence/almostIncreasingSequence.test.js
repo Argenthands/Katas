@@ -20,7 +20,7 @@ const test_17 = [1, 2, 3, 4, 99, 5, 6] // true
 const test_18 = [123, -17, -5, 1, 2, 3, 12, 43, 45] // true
 const test_19 = [3, 5, 67, 98, 3] // trues
 
-xdescribe('almostIncreasingSequence', ()=>{
+describe('almostIncreasingSequence', ()=>{
 
     test(`should return false if receive the array ${test_1}`, ()=>{
         expect(almostIncreasingSequence(test_1)).toBe(false)
