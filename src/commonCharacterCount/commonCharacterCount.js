@@ -10,7 +10,7 @@ function commonCharacterCount (s1, s2){
         arr2 = s2.split('')
     }
     for(let i=0; i < arr1.length; i++){
-        let common = arr2.indexOf(arr1[i], 1)
+        let common = arr2.indexOf(arr1[i], 0)
         if(common > -1){
             result.push(arr2.splice(common,1))
         }
