@@ -1,95 +1,70 @@
 const AllLongestStrings = require('./AllLongestStrings')
 
-const tests = [
-    {
-        input: ["aba", "aa", "ad", "vcd", "aba"],
-        output: ["aba", "vcd", "aba"]
-    },
-    {
-        input: ["aa"],
-        output: ["aa"]
-    },
-    {
-        input: ["abc", "eeee", "abcd", "dcd"],
-        output: ["eeee", "abcd"]
-    },
-    {
-        input: ["a", "abc", "cbd", "zzzzzz", "a", "abcdef", "asasa", "aaaaaa"],
-        output: ["zzzzzz", "abcdef", "aaaaaa"]
-    },
-    {
-        input: ["enyky", "benyky", "yely", "varennyky"],
-        output: ["varennyky"]
-    },
-    {
-        input: ["abacaba", "abacab", "abac", "xxxxxx"],
-        output: ["abacaba"]
-    },
-    {
-        input: ["young", "yooooooung", "hot", "or", "not", "come", "on", "fire", "water", "watermelon"],
-        output: ["yooooooung", "watermelon"]
-    },
-    {
-        input: ["onsfnib", "aokbcwthc", "jrfcw"],
-        output: ["aokbcwthc"]
-    },
-    {
-        input: ["lbgwyqkry"],
-        output: ["lbgwyqkry"]
-    },
-    {
-        input: ["i"],
-        output: ["i"]
-    },
-    {
-        input: [],
-        output: []
-    },
-    {
-        input: [],
-        output: []
-    },
-]
-
 describe('Given an array of strings, return another array containing all of its longest strings.', ()=>{
 
-    test('', ()=>{
-        expect(AllLongestStrings(tests[0].input)).toStrictEqual(AllLongestStrings(tests[0].output))
+    test('should return ["aba", "vcd", "aba"] if receive ["aba", "aa", "ad", "vcd", "aba"]', ()=>{
+        const input = ["aba", "aa", "ad", "vcd", "aba"]
+        const output = ["aba", "vcd", "aba"]
+        expect(AllLongestStrings(input)).toStrictEqual(AllLongestStrings(output))
     }),
 
-    test('', ()=>{
-        expect(AllLongestStrings(tests[1].input)).toStrictEqual(AllLongestStrings(tests[1].output))
+    test('should return ["aa"] if receive ["aa"]', ()=>{
+        const input = ["aa"]
+        const output = ["aa"]
+        expect(AllLongestStrings(input)).toStrictEqual(AllLongestStrings(output))
     }),
 
-    test('', ()=>{
-        expect(AllLongestStrings(tests[2].input)).toStrictEqual(AllLongestStrings(tests[2].output))
+    test('should return ["eeee", "abcd"] if receive ["abc", "eeee", "abcd", "dcd"]', ()=>{
+        const input = ["abc", "eeee", "abcd", "dcd"]
+        const output = ["eeee", "abcd"]
+        expect(AllLongestStrings(input)).toStrictEqual(AllLongestStrings(output))
     }),
 
-    test('', ()=>{
-        expect(AllLongestStrings(tests[3].input)).toStrictEqual(AllLongestStrings(tests[3].output))
+    test('should return ["zzzzzz", "abcdef", "aaaaaa"] if receive ["a", "abc", "cbd", "zzzzzz", "a", "abcdef", "asasa", "aaaaaa"]', ()=>{
+        const input = ["a", "abc", "cbd", "zzzzzz", "a", "abcdef", "asasa", "aaaaaa"]
+        const output = ["zzzzzz", "abcdef", "aaaaaa"]
+        expect(AllLongestStrings(input)).toStrictEqual(AllLongestStrings(output))
     }),
 
-    test('', ()=>{
-        expect(AllLongestStrings(tests[4].input)).toStrictEqual(AllLongestStrings(tests[4].output))
+    test('should return ["varennyky"] if receive ["enyky", "benyky", "yely", "varennyky"]', ()=>{
+        const input = ["enyky", "benyky", "yely", "varennyky"]
+        const output = ["varennyky"]
+        expect(AllLongestStrings(input)).toStrictEqual(AllLongestStrings(output))
     }),
 
-    test('', ()=>{
-        expect(AllLongestStrings(tests[5].input)).toStrictEqual(AllLongestStrings(tests[5].output))
+    test('should return ["abacaba"] if receive ["abacaba", "abacab", "abac", "xxxxxx"]', ()=>{
+        const input = ["abacaba", "abacab", "abac", "xxxxxx"]
+        const output = ["abacaba"]
+        expect(AllLongestStrings(input)).toStrictEqual(AllLongestStrings(output))
     }),
 
-    test('', ()=>{
-        expect(AllLongestStrings(tests[6].input)).toStrictEqual(AllLongestStrings(tests[6].output))
+    test('should return ["yooooooung", "watermelon"] if receive ["young", "yooooooung", "hot", "or", "not", "come", "on", "fire", "water", "watermelon"]', ()=>{
+        const input = ["young", "yooooooung", "hot", "or", "not", "come", "on", "fire", "water", "watermelon"]
+        const output = ["yooooooung", "watermelon"]
+        expect(AllLongestStrings(input)).toStrictEqual(AllLongestStrings(output))
     }),
 
-    test('', ()=>{
-        expect(AllLongestStrings(tests[7].input)).toStrictEqual(AllLongestStrings(tests[7].output))
+    test('should return ["aokbcwthc"] if receive ["onsfnib", "aokbcwthc", "jrfcw"]', ()=>{
+        const input = ["onsfnib", "aokbcwthc", "jrfcw"]
+        const output = ["aokbcwthc"]
+        expect(AllLongestStrings(input)).toStrictEqual(AllLongestStrings(output))
     }),
 
-    test('', ()=>{
-        expect(AllLongestStrings(tests[8].input)).toStrictEqual(AllLongestStrings(tests[8].output))
+    test('should return ["lbgwyqkry"] if receive ["lbgwyqkry"]', ()=>{
+        const input = ["lbgwyqkry"]
+        const output = ["lbgwyqkry"]
+        expect(AllLongestStrings(input)).toStrictEqual(AllLongestStrings(output))
     }),
 
-    test('', ()=>{
-        expect(AllLongestStrings(tests[9].input)).toStrictEqual(AllLongestStrings(tests[9].output))
+    test('should return ["i"] if receive ["i"]', ()=>{
+        const input = ["i"]
+        const output = ["i"]
+        expect(AllLongestStrings(input)).toStrictEqual(AllLongestStrings(output))
+    }),
+
+    test('should return [""] if receive [""]', ()=>{
+        const input = [""]
+        const output = [""]
+        expect(AllLongestStrings(input)).toStrictEqual(AllLongestStrings(output))
     })
 })
