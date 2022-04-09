@@ -1,5 +1,5 @@
 const adjacentElementsProduct = require('./adjacentElementsProduct')
-describe('adjacentElementsProduct', ()=>{
+describe('Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.', ()=>{
 
     test('should return 21 if receive the array [3, 6, -2, -5, 7, 3]',()=>{
         expect(adjacentElementsProduct([3, 6, -2, -5, 7, 3])).toBe(21)
